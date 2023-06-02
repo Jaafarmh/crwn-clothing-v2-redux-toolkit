@@ -9,7 +9,7 @@ import {
 } from '../../utils/firebase/firebase.utils';
 
 import { SignInContainer, ButtonsContainer } from './sign-in-form.styles';
-
+import { useNavigate } from 'react-router-dom';
 const defaultFormFields = {
   email: '',
   password: '',
@@ -18,14 +18,19 @@ const defaultFormFields = {
 const SignInForm = () => {
   const [formFields, setFormFields] = useState(defaultFormFields);
   const { email, password } = formFields;
+  const navigate = useNavigate();
+
+  const moveToShop = () => {
+    navigate('/shop'); }
 
   const resetFormFields = () => {
     setFormFields(defaultFormFields);
   };
 
   const signInWithGoogle = async () => {
-    await signInWithGooglePopup();
-  };
+     await signInWithGooglePopup();
+     moveToShop();
+    }
 
   const handleSubmit = async (event) => {
     event.preventDefault();
@@ -44,6 +49,9 @@ const SignInForm = () => {
     setFormFields({ ...formFields, [name]: value });
   };
 
+    ///////////////////
+
+    /////////////
   return (
     <SignInContainer>
       <h2>Already have an account?</h2>

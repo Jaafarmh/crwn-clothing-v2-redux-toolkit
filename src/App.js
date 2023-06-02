@@ -15,6 +15,7 @@ import Checkout from './routes/checkout/checkout.component';
 import { setCurrentUser } from './store/user/user.slice';
 
 const App = () => {
+   
   const dispatch = useDispatch();
 
   useEffect(() => {

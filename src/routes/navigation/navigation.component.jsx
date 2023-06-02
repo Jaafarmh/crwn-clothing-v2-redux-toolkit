@@ -10,7 +10,7 @@ import { selectIsCartOpen } from '../../store/cart/cart.selector';
 
 import { ReactComponent as CrwnLogo } from '../../assets/crown.svg';
 import { signOutUser } from '../../utils/firebase/firebase.utils';
-
+import { useNavigate } from 'react-router-dom';
 import {
   NavigationContainer,
   NavLinks,
@@ -21,6 +21,10 @@ import {
 const Navigation = () => {
   const currentUser = useSelector(selectCurrentUser);
   const isCartOpen = useSelector(selectIsCartOpen);
+  const navigate = useNavigate();
+  const moveToHome = () =>{
+    navigate('./');
+  }  
 
   return (
     <Fragment>
@@ -32,7 +36,7 @@ const Navigation = () => {
           <NavLink to='/shop'>SHOP</NavLink>
 
           {currentUser ? (
-            <NavLink as='span' onClick={signOutUser}>
+            <NavLink as='span' onClick={()=>{signOutUser();moveToHome()}}>
               SIGN OUT
             </NavLink>
           ) : (
