@@ -6,7 +6,6 @@ import {
 } from '../../store/cart/cart.selector';
 
 import CheckoutItem from '../../components/checkout-item/checkout-item.component';
-import PaymentFormComponent from '../../components/payment-form/payment-form.component';
 import {
   CheckoutContainer,
   CheckoutHeader,
@@ -49,7 +48,6 @@ const Checkout = () => {
       <Total>Total: ${cartTotal}
       <button onClick={removeAllItemsHandler}> remove all items</button>
       </Total>
-        <PaymentFormComponent />
     </CheckoutContainer>
   );
 };
