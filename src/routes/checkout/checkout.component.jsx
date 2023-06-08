@@ -1,5 +1,5 @@
 import { useDispatch, useSelector } from 'react-redux';
-
+import Button from '../../components/button/button.component';
 import {
   selectCartItems,
   selectCartTotal,
@@ -11,6 +11,7 @@ import {
   CheckoutHeader,
   HeaderBlock,
   Total,
+
 } from './checkout.styles';
 import { removeAllItems } from '../../store/cart/cart.slice';
 
@@ -45,9 +46,8 @@ const Checkout = () => {
       {cartItems.map((cartItem) => (
         <CheckoutItem key={cartItem.id} cartItem={cartItem} />
       ))}
-      <Total>Total: ${cartTotal}
-      <button onClick={removeAllItemsHandler}> remove all items</button>
-      </Total>
+      <Total>Total: ${cartTotal}   </Total>
+      <Button onClick={removeAllItemsHandler}> remove all items</Button>
     </CheckoutContainer>
   );
 };
