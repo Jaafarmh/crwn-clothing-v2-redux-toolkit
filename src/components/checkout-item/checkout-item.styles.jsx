@@ -8,20 +8,33 @@ export const CheckoutItemContainer = styled.div`
   padding: 15px 0;
   font-size: 20px;
   align-items: center;
-`;
-
-export const ImageContainer = styled.div`
-  width: 23%;
+  `;
+ 
+  export const ImageContainer = styled.div`
+  width: 30%;
   padding-right: 15px;
 
+  @media (max-width: 900px) {
+    width:50%;
+  }
+   
+    
   img {
+    border-radius:10px;
     width: 100%;
     height: 100%;
+ 
   }
+
 `;
+
+
 
 export const BaseSpan = styled.span`
   width: 23%;
+  @media (max-width: 900px) {
+    width:35%;
+  }
 `;
 
 export const Quantity = styled(BaseSpan)`

@@ -7,6 +7,11 @@ export const ProductCartContainer = styled.div`
   height: 350px;
   align-items: center;
   position: relative;
+  @media (max-width: 900px) {
+    
+    margin-bottom:15px;
+
+  }
 
   img {
     width: 100%;
@@ -26,12 +31,15 @@ export const ProductCartContainer = styled.div`
   &:hover {
     img {
       opacity: 0.8;
+      
     }
 
     button {
       opacity: 0.85;
       display: flex;
     }
+  
+  
   }
 `;
 
@@ -41,13 +49,16 @@ export const Footer = styled.div`
   display: flex;
   justify-content: space-between;
   font-size: 18px;
+ 
 `;
 
 export const Name = styled.span`
   width: 90%;
   margin-bottom: 15px;
+ 
 `;
 
 export const Price = styled.span`
   width: 10%;
+ 
 `;

@@ -38,10 +38,6 @@ const CartDropdown = () => {
       };
     }, []);
   
-  
-
-
-
   return (
     <CartDropdownContainer ref={clickRef} >
       <CartItems>

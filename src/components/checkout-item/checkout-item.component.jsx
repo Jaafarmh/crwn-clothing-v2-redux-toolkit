@@ -4,6 +4,7 @@ import {
   clearItemFromCart,
   addItemToCart,
   removeItemFromCart,
+  removeAllItems
 } from '../../store/cart/cart.slice';
 
 import {
@@ -14,6 +15,7 @@ import {
   Arrow,
   Value,
   RemoveButton,
+
 } from './checkout-item.styles';
 
 const CheckoutItem = ({ cartItem }) => {
@@ -22,15 +24,21 @@ const CheckoutItem = ({ cartItem }) => {
 
   const clearItemHandler = () =>
     dispatch(clearItemFromCart( cartItem));
+
   const addItemHandler = () => dispatch(addItemToCart( cartItem));
+
   const removeItemHandler = () =>
     dispatch(removeItemFromCart( cartItem));
+
 
   return (
     <CheckoutItemContainer>
       <ImageContainer>
         <img src={imageUrl} alt={`${name}`} />
       </ImageContainer>
+   
+
+
       <BaseSpan> {name} </BaseSpan>
       <Quantity>
         <Arrow onClick={removeItemHandler}>&#10094;</Arrow>
@@ -39,6 +47,8 @@ const CheckoutItem = ({ cartItem }) => {
       </Quantity>
       <BaseSpan> {price}</BaseSpan>
       <RemoveButton onClick={clearItemHandler}>&#10005;</RemoveButton>
+
+      
     </CheckoutItemContainer>
   );
 };

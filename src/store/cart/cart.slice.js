@@ -39,6 +39,8 @@ const removeCartItem = (cartItems, cartItemToRemove) => {
 const clearCartItem = (cartItems, cartItemToClear) =>
   cartItems.filter((cartItem) => cartItem.id !== cartItemToClear.id);
 
+  const ItemsRemoved = (cartItems)=>
+  cartItems.filter((cartItem) => {});
 
 const CART_INITIAL_STATE = {
   isCartOpen: false,
@@ -60,11 +62,15 @@ export const cartSlice = createSlice ({
     },
     setIsCartOpen(state, action) {
       state.isCartOpen = action.payload;
+    },
+    removeAllItems (state,action) {
+      state.cartItems = ItemsRemoved (state.cartItems, action.payload)
     }
+
   }
 })
 
-export const {addItemToCart, removeItemFromCart,clearItemFromCart,setIsCartOpen} = cartSlice.actions;
+export const {addItemToCart, removeItemFromCart,clearItemFromCart,setIsCartOpen,removeAllItems} = cartSlice.actions;
 
 
 export const cartReducer = cartSlice.reducer;
