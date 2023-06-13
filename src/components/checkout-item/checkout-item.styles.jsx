@@ -11,20 +11,19 @@ export const CheckoutItemContainer = styled.div`
   `;
  
   export const ImageContainer = styled.div`
-  width: 30%;
+  width: 23%;
   padding-right: 15px;
 
-  @media (max-width: 900px) {
-    width:50%;
-  }
-   
-    
+  
   img {
     border-radius:10px;
     width: 100%;
     height: 100%;
- 
   }
+  @media (max-width: 900px) {
+    width:80%;
+  }
+   
 
 `;
 
@@ -34,6 +33,7 @@ export const BaseSpan = styled.span`
   width: 23%;
   @media (max-width: 900px) {
     width:35%;
+    display:none;
   }
 `;
 

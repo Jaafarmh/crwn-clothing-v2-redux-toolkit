@@ -37,8 +37,6 @@ const CheckoutItem = ({ cartItem }) => {
         <img src={imageUrl} alt={`${name}`} />
       </ImageContainer>
    
-
-
       <BaseSpan> {name} </BaseSpan>
       <Quantity>
         <Arrow onClick={removeItemHandler}>&#10094;</Arrow>

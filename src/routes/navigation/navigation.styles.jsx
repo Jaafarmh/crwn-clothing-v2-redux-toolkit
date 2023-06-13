@@ -4,17 +4,14 @@ import { Link } from 'react-router-dom';
 export const NavigationContainer = styled.div`
   position: sticky;
   top:0px;
-  height: 70px;
+  ${'' /* heigt: 70px; */}
   width: 100%;
   display: flex;
   justify-content: space-between;
   margin-bottom: 25px;
+  align-items:center;
   z-index: 9;
-  @media (max-width: 900px) {
-  ${'' /* border-bottom: 1px solid black; */}
-  background-color: #f3f2ef;
 
-  }
 `;
 
 export const LogoContainer = styled(Link)`
@@ -36,4 +33,7 @@ export const NavLinks = styled.div`
 export const NavLink = styled(Link)`
   padding: 10px 15px;
   cursor: pointer;
+ @media (max-width:500px){
+  padding:5px;
+ }
 `;
