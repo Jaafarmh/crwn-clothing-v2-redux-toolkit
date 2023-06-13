@@ -4,13 +4,14 @@ import { Link } from 'react-router-dom';
 export const NavigationContainer = styled.div`
   position: sticky;
   top:0px;
-  ${'' /* heigt: 70px; */}
+  heigt: 70px;
   width: 100%;
   display: flex;
   justify-content: space-between;
   margin-bottom: 25px;
   align-items:center;
   z-index: 9;
+  background-color: #f3f2ef;
 
 `;
 
