@@ -29,7 +29,7 @@ const Navigation = () => {
     
   }
   return (
-    <Fragment>
+    <div>
       <NavigationContainer>
         <LogoContainer to='/'>
           <CrwnLogo className='logo' />
@@ -49,7 +49,7 @@ const Navigation = () => {
         {isCartOpen && <CartDropdown />}
       </NavigationContainer>
       <Outlet />
-    </Fragment>
+    </div>
   );
 };
 
