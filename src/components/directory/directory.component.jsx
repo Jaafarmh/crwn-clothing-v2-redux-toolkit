@@ -6,7 +6,7 @@ const categories = [
   {
     id: 1,
     title: 'hats',
-    imageUrl: 'https://i.ibb.co/cvpntL1/hats.png',
+    imageUrl: 'https://tophatads.com/wp-content/uploads/2021/04/hat.png',
     route: 'shop/hats',
   },
   {
